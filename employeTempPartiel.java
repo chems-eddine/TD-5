@@ -11,5 +11,12 @@ public class employeTempPartiel extends employe {
 	public void setMontantH(double montantH){this.montantH= montantH;}
 
 	public double calculePaie(){ setSalaire(montantH*heure);
-	return getSalaire();}
+		if(this.heure=<0 )
+			trow new ArithmeticExepcetion("vous n'avez pas travaillé assez");
+			else{
+				if(this.heure<35)
+					trow new ArithmeticExepcetion("vous avez travailez moins que 35 H");
+				else
+					return getSalaire();}}
+	    
 }
