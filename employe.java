@@ -17,8 +17,13 @@ public class employe {
 	public double getSalaire(){return this.salaire;}
 	public void setSalaire(double salaire){this.salaire= salaire;}
 	public double calculePaie(){
-		return salaire;}
+		if (this.Salaire==0)
+			throw new ArithmeticExeption("le Salaire n'est pas viré");
+		else
+		        return salaire;}
 	public void chequePaie(){
-		System.out.println("payer � l'ordre de "+name+" ("+job+") *** "+salaire+" DA");
+		try{
+		     System.out.println("payer à l'ordre de "+name+" ("+job+") *** "+salaire+" DA");}
+		catch( ArithmeticExeption .e){System.err.println(e.getmessage) }
 	}
 }
